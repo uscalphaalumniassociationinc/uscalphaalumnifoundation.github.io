@@ -3,62 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Alpha - USC-Alpha Alumni Association Foundation</title>
+    <title>Project Alpha - USC Alpha Alumni Association Foundation Scholarship Grant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f4f7f9;
+            color: #333;
         }
         header {
-            background-color: #004d00; /* Dark Green */
-            color: white;
+            background-color: #003d00; /* Darker Green */
+            color: #ffffff;
             padding: 20px;
             text-align: center;
         }
         section {
             padding: 20px;
             margin: 0 auto;
-            max-width: 800px;
-            background-color: white;
+            max-width: 900px;
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
+        h1, h2, h3, h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
         h1 {
-            color: #ffcc00; /* Yellow */
+            color: #ffcc00; /* Bright Yellow */
         }
         h2 {
-            color: #004d00; /* Dark Green */
+            color: #004d00; /* Medium Green */
         }
-        .benefits, .how-to-help {
-            background-color: #e6ffe6; /* Light Green */
-            border-left: 5px solid #004d00; /* Dark Green */
-            padding: 10px;
+        h3 {
+            color: #006400; /* Dark Green */
+        }
+        h4 {
+            color: #004d00; /* Medium Green */
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 10px;
+            background-color: #ffcc00; /* Bright Yellow */
+            color: #003d00; /* Darker Green */
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+        .cta-button:hover {
+            background-color: #e6b800; /* Darker Yellow */
+        }
+        .team-member {
+            margin-bottom: 20px;
+            font-size: 14px; /* Smaller font size */
+        }
+        .team-member h3 {
+            margin: 0;
+            font-size: 16px; /* Smaller font size for names */
+            color: #006400; /* Dark Green */
+        }
+        .team-member p {
+            margin: 5px 0 0;
+            font-size: 14px; /* Smaller font size for designations */
+        }
+        .benefits, .how-to-help, .faqs {
+            background-color: #e8f5e9; /* Light Green */
+            border-left: 6px solid #004d00; /* Medium Green */
+            padding: 15px;
             margin-bottom: 20px;
         }
-        .contact {
-            background-color: #ffffe6; /* Light Yellow */
-            border-left: 5px solid #ffcc00; /* Yellow */
-            padding: 10px;
+        .contact, .get-involved {
+            background-color: #fffde7; /* Light Yellow */
+            border-left: 6px solid #ffcc00; /* Bright Yellow */
+            padding: 15px;
+        }
+        .faqs {
             margin-bottom: 20px;
+        }
+        .faqs p {
+            margin-bottom: 1em; /* Space between FAQ questions and answers */
+            white-space: pre-wrap; /* Preserve white spaces and line breaks */
+        }
+        .faqs p + p {
+            margin-top: 1em; /* Additional space after each question */
+        }
+        .faqs .answer {
+            margin-left: 20px; /* Indent answers */
         }
         footer {
-            background-color: #004d00; /* Dark Green */
-            color: white;
+            background-color: #003d00; /* Darker Green */
+            color: #ffffff;
             text-align: center;
-            padding: 5px;
+            padding: 15px;
             position: fixed;
             width: 100%;
-            bottom: 0;
+            bottom: -100px; /* Start hidden below the viewport */
+            transition: bottom 0.5s ease-in-out;
+        }
+        footer.show {
+            bottom: 0; /* Slide up to visible position */
         }
         a {
-            color: #ffcc00; /* Yellow */
+            color: #ffcc00; /* Bright Yellow */
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ol {
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -66,57 +125,190 @@
 
 <header>
     <h1>The Project Alpha</h1>
-    <p>USC Alpha Alumni Foundation</p>
+    <p>USC Alpha Alumni Association Foundation Scholarship Grant</p>
 </header>
 
 <section>
     <h2>Igniting Hope, Building Futures</h2>
-    <p>Education is the key that unlocks countless possibilities. Yet, for many Filipino children, this key remains out of reach. The USC Alpha Alumni Association Foundation is committed to changing that.</p>
-    <p>Our nation's youth are its greatest asset. They are the leaders, innovators, and change-makers of tomorrow. However, systemic challenges, such as poverty and family incarceration, often hinder their potential.</p>
-    <p>Project Alpha is our answer to this pressing issue. We offer scholarships for secondary education and vocational training to deserving students whose parents are currently deprived of liberty. By investing in these young minds, we are not only providing financial support but also nurturing hope, resilience, and a strong sense of purpose.</p>
+    <p>Education is the key that unlocks countless possibilities. Yet, for many Filipino children, this key remains out of reach. The USC Alpha Alumni Association Foundation is 
+
+committed to changing that through Project Alpha. Our scholarship program supports the education of children whose parents are incarcerated and underprivileged youth, giving 
+
+them the tools to break the cycle of poverty and become the leaders of tomorrow.</p>
+    <a href="#apply" class="cta-button">Apply for Scholarship</a>
+    <a href="#donate" class="cta-button">Donate Now</a>
 </section>
 
-<section class="benefits">
-    <h2>Why Project Alpha Matters:</h2>
-    <ul>
-        <li>Breaking the cycle of poverty: Education is a powerful tool for lifting families out of poverty and creating a brighter future for generations to come.</li>
-        <li>Empowering young leaders: Our scholars will become catalysts for positive change in their communities, inspiring others and contributing to nation-building.</li>
-        <li>Restoring hope: By supporting these students, we offer a beacon of hope in challenging circumstances, demonstrating that society cares about their well-being.</li>
-    </ul>
+<section id="about-us">
+    <h2>About Us</h2>
+    <h3>Our Mission</h3>
+    <p>At the USC Alpha Alumni Association Foundation, our mission is to empower the youth of the Philippines through education. We believe that every child deserves the 
+
+opportunity to learn, grow, and succeed, regardless of their circumstances.</p>
+    <h3>Our Team</h3>
+    <div class="team-member">
+        <h3>Ferdinand Valmores</h3>
+        <p>President, USC Alpha Alumni Association Inc.</p>
+    </div>
+    <div class="team-member">
+        <h3>Mark Anthony Laus</h3>
+        <p>Project Manager</p>
+    </div>
+    <div class="team-member">
+        <h3>Isabeau Gomez</h3>
+        <p>Program & Administrative Coordinator</p>
+    </div>
+    <div class="team-member">
+        <h3>Keith Bacaltos</h3>
+        <p>Finance Manager</p>
+    </div>
+    <div class="team-member">
+        <h3>Harold Resol</h3>
+        <p>Finance & Compliance Manager</p>
+    </div>
+    <div class="team-member">
+        <h3>Jhurds Neo</h3>
+        <p>Application and Screening Manager</p>
+    </div>
 </section>
 
-<section class="benefits">
-    <h2>Scholarship Benefits:</h2>
-    <ul>
-        <li>Tuition Fees: Full coverage of tuition fees to ensure financial barriers do not hinder academic pursuits.</li>
-        <li>Allowance: Monthly stipends to cover basic needs and school-related expenses.</li>
-        <li>Books and School Supplies: Provision of essential learning materials.</li>
-        <li>Mentoring and Guidance: Access to mentors who provide academic support and career guidance.</li>
-        <li>Opportunities for Leadership Development: Programs and workshops to develop leadership skills and community involvement.</li>
-    </ul>
+<section id="scholarship-program">
+    <h2>Scholarship Program</h2>
+    <h3>Program Overview</h3>
+    <p>Project Alpha provides scholarships for secondary education and vocational training to students whose parents are deprived of liberty, and underprivileged youth. Our 
+
+program covers tuition fees, allowances, books, and school supplies, along with mentoring and leadership development opportunities.</p>
+    
+    <h3>Application Process</h3>
+    <p>(To be filled in with more details by Bro Jhurds Neo)</p>
+    <ol>
+        <li>Check Eligibility</li>
+        <li>Gather Required Documents</li>
+        <li>Complete the Application Form</li>
+        <li>Submit Your Application</li>
+    </ol>
+    
+    <h3>FAQs</h3>
+    <div class="faqs">
+        <h4>General Questions</h4>
+        <p><strong>1. What is Project Alpha?</strong></p>
+        <p class="answer">Project Alpha is a scholarship program initiated by the USC Alpha Alumni Association Foundation. It aims to support the education of children whose 
+
+parents are incarcerated, providing them with financial assistance, mentoring, and leadership development opportunities.</p>
+        
+        <p><strong>2. Who can apply for the Project Alpha scholarship?</strong></p>
+        <p class="answer">Students whose parents are currently deprived of liberty and underprivileged youths who meet our academic and financial criteria are eligible to apply for 
+
+the scholarship.</p>
+        
+        <p><strong>3. What types of educational programs does the scholarship cover?</strong></p>
+        <p class="answer">The scholarship covers secondary education and vocational training programs.</p>
+
+        <h4>Application Process</h4>
+        <p><strong>4. How do I apply for the scholarship?</strong></p>
+        <p class="answer">To apply for the scholarship, follow these steps:
+            <ul>
+                <li>Check eligibility criteria.</li>
+                <li>Gather the required documents.</li>
+                <li>Complete the application form.</li>
+                <li>Submit your application by the specified deadline.</li>
+            </ul>
+        </p>
+        
+        <p><strong>5. What documents are required for the application?</strong></p>
+        <p class="answer">You will need to provide proof of your parents incarceration, academic records, a recommendation letter, and a personal statement. Additional documents 
+
+may be required as specified in the application guidelines.</p>
+        
+        <p><strong>6. When is the application deadline?</strong></p>
+        <p class="answer">The application deadlines vary each year. Please check our website or contact us for the most current information.</p>
+
+        <h4>Scholarship Benefits</h4>
+        <p><strong>7. What expenses does the scholarship cover?</strong></p>
+        <p class="answer">The scholarship covers tuition fees, monthly allowances, books, school supplies, mentoring, and opportunities for leadership development.</p>
+        
+        <p><strong>8. How long does the scholarship last?</strong></p>
+        <p class="answer">The scholarship is awarded on an annual basis and can be renewed each year based on the scholars academic performance and adherence to the 
+
+program guidelines.</p>
+        
+        <p><strong>9. Can the scholarship be used for expenses other than tuition?</strong></p>
+        <p class="answer">Yes, the scholarship also provides a monthly allowance, books, and school supplies. It also includes mentoring and leadership development 
+
+opportunities.</p>
+
+        <h4>Selection Process</h4>
+        <p><strong>10. How are scholars selected?</strong></p>
+        <p class="answer">Scholars are selected based on their academic performance, financial need, personal statement, and recommendations. The selection committee reviews 
+
+all applications and conducts interviews with shortlisted candidates.</p>
+        
+        <p><strong>11. How will I be notified if I am selected?</strong></p>
+        <p class="answer">Selected candidates will be notified via email and phone. Announcements will also be made on our website and social media channels.</p>
+
+        <h4>Donations and Volunteering</h4>
+        <p><strong>12. How can I donate to Project Alpha?</strong></p>
+        <p class="answer">You can donate through our website using our secure online donation form. We accept one-time and recurring donations. For more information, please visit 
+
+our "Get Involved" section.</p>
+        
+        <p><strong>13. Can I volunteer for Project Alpha?</strong></p>
+        <p class="answer">Yes, we welcome volunteers! Whether you are an educator, mentor, or community organizer, your involvement can make a significant impact. Please visit 
+
+our "Get Involved" section to learn more about volunteer opportunities.</p>
+        
+        <p><strong>14. How can I get more information about Project Alpha?</strong></p>
+        <p class="answer">For more information, please visit our website or contact us via email at <a href="mailto:info@uscalpha.org">info@uscalpha.org</a></p>
+        
+        <p><strong>15. Are there any events or workshops conducted by Project Alpha?</strong></p>
+        <p class="answer">Yes, we regularly conduct events and workshops for our scholars. Please check our Blog or Events page for updates on upcoming activities.</p>
+        
+        <p><strong>16. How can I stay updated on Project Alpha’s activities and news?</strong></p>
+        <p class="answer">You can stay updated by subscribing to our newsletter, following us on social media, and regularly visiting our Blog page.</p>
+    </div>
 </section>
 
-<section class="how-to-help">
-    <h2>How You Can Help:</h2>
-    <ul>
-        <li>Become a Donor: Your generous donation can make a profound difference in the lives of these young scholars. Whether it's a one-time contribution or a recurring gift, every bit helps in creating a brighter future.</li>
-        <li>Spread the Word: Share our mission with your network. The more people know about Project Alpha, the more support we can garner.</li>
-        <li>Volunteer: Offer your time and skills to support our programs. Whether you are a mentor, educator, or community organizer, your involvement can make a significant impact.</li>
-    </ul>
+<section id="success-stories">
+    <h2>Success Stories</h2>
+    <p>Read about the inspiring journeys of our scholars. From overcoming challenges to achieving academic success, these stories highlight the impact of Project Alpha on their 
+
+lives.</p>
 </section>
 
-<section class="contact">
-    <h2>Contact Us:</h2>
-    <p>For more information or to donate, please head <a href="#">here</a> or contact us at:</p>
-    <p>Email: uscalphaalumniassociationinc@protonmail.com</p>
-    <p>Facebook Page: USC Alpha Alumni Association Inc. OFFICIAL</p>
-    <p>Website: uscalphaalumniassociationinc.uscalpha.org</p>
-    </ul>
+<section id="get-involved">
+    <h2>Get Involved</h2>
+    <div class="get-involved">
+        <h3>Donate</h3>
+        <p>Your support can transform lives. Learn more about how you can contribute to Project Alpha and make a difference in the lives of our scholars.</p>
+        <a href="https://www.yourdonationpage.com" class="cta-button">Donate Now</a>
+    </div>
+    <div class="get-involved">
+        <h3>Volunteer</h3>
+        <p>Join us in our mission. Explore volunteer opportunities and become a part of our community.</p>
+        <a href="#volunteer" class="cta-button">Volunteer</a>
+    </div>
+    <div class="get-involved">
+        <h3>Partner with Us</h3>
+        <p>We welcome partnerships with organizations that share our vision. Discover how we can work together to support education for all.</p>
+    </div>
 </section>
 
 <footer>
-    <p>Join us in transforming lives! Your generous donation can make a profound difference in the lives of these young scholars. Together, we can build a stronger, more equitable Philippines.</p>
+    <p>Join us in transforming lives! Your generous donation can make a profound difference in the lives of these young scholars. Together, we can build a stronger, more equitable 
+
+Philippines.</p>
 </footer>
+
+<script>
+    // Show footer after 20 seconds
+    setTimeout(function() {
+        document.querySelector('footer').classList.add('show');
+        // Hide footer after an additional 20 seconds
+        setTimeout(function() {
+            document.querySelector('footer').classList.remove('show');
+        }, 20000);
+    }, 10000);
+</script>
 
 </body>
 </html>
